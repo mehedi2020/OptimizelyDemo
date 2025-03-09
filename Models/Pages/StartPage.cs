@@ -20,7 +20,8 @@ namespace OptimizelyDemo.Models.Pages;
         typeof(StandardPage),
         typeof(ISearchPage),
         typeof(LandingPage),
-        typeof(ContentFolder)
+        typeof(ContentFolder),
+        typeof(NewPage)
     ], // Pages we can create under the start page...
     ExcludeOn =
     [
@@ -28,7 +29,8 @@ namespace OptimizelyDemo.Models.Pages;
         typeof(ProductPage),
         typeof(StandardPage),
         typeof(ISearchPage),
-        typeof(LandingPage)
+        typeof(LandingPage),
+        typeof(NewPage)
     ])] // ...and underneath those we can't create additional start pages
 public class StartPage : SitePageData
 {
@@ -60,6 +62,10 @@ public class StartPage : SitePageData
     public virtual PageReference SearchPageLink { get; set; }
 
     [Display(GroupName = Globals.GroupNames.SiteSettings)]
-    public virtual SiteLogotypeBlock SiteLogotype { get; set; } 
-    
+    public virtual SiteLogotypeBlock SiteLogotype { get; set; }
+
+    [Display(GroupName = Globals.GroupNames.BrickerFooter)]
+    public virtual BrickerFooterBlock BrickerFooter { get; set; }
+
+
 }

@@ -18,6 +18,7 @@ public class StartPageController : PageControllerBase<StartPage>
             // Connect the view models logotype property to the start page's to make it editable
             var editHints = ViewData.GetEditHints<PageViewModel<StartPage>, StartPage>();
             editHints.AddConnection(m => m.Layout.Logotype, p => p.SiteLogotype);
+            editHints.AddConnection(m => m.Layout.BrickerFooterBlock, p => p.BrickerFooter);
             editHints.AddConnection(m => m.Layout.ProductPages, p => p.ProductPageLinks);
             editHints.AddConnection(m => m.Layout.CompanyInformationPages, p => p.CompanyInformationPageLinks);
             editHints.AddConnection(m => m.Layout.NewsPages, p => p.NewsPageLinks);

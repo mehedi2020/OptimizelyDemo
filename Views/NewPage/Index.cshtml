@@ -1,0 +1,9 @@
+﻿@model PageViewModel<OptimizelyDemo.Models.Pages.NewPage>
+
+@{
+    Layout = "~/Views/Shared/Breaker/Layouts/_BrickerRoot.cshtml"; // Set new layout
+    ViewData["Title"] = Model.CurrentPage.Name;
+}
+
+<h2>@Model.CurrentPage.Name</h2>
+<p>@Model.CurrentPage.MainContent</p>

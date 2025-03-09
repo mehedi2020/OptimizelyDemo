@@ -38,6 +38,12 @@ public class Globals
 
         [Display(Name = "Specialized", Order = 90)]
         public const string Specialized = "Specialized";
+
+        [Display(Name = "Bricker", Order = 50)]
+        public const string NewPageTemplate = "New page Tempate";
+
+        [Display(Name = "BrickerFooter", Order = 50)]
+        public const string BrickerFooter = "BrickerFooter";
     }
 
     /// <summary>

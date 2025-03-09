@@ -31,4 +31,6 @@ public class LayoutModel
     public HtmlString SearchActionUrl { get; set; }
 
     public bool IsInReadonlyMode { get; set; }
+
+    public BrickerFooterBlock BrickerFooterBlock { get; set; }
 }

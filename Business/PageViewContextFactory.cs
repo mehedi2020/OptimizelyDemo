@@ -55,7 +55,8 @@ public class PageViewContextFactory
             LoggedIn = httpContext.User.Identity.IsAuthenticated,
             LoginUrl = new HtmlString(GetLoginUrl(currentContentLink)),
             SearchActionUrl = new HtmlString(UrlResolver.Current.GetUrl(startPage.SearchPageLink)),
-            IsInReadonlyMode = _databaseMode.DatabaseMode == DatabaseMode.ReadOnly
+            IsInReadonlyMode = _databaseMode.DatabaseMode == DatabaseMode.ReadOnly,
+            BrickerFooterBlock = startPage.BrickerFooter,
         };
     }
 

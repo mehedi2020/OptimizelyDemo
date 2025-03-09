@@ -43,7 +43,7 @@
 
     @if (!Model.Layout.HideHeader)
     {
-        await Html.RenderPartialAsync("BrickerHeader", Model);
+        await Html.RenderPartialAsync("Breaker/Header", Model);
     }
 
     <div class="container">
@@ -52,7 +52,7 @@
 
     @if (!Model.Layout.HideFooter)
     {
-        await Html.RenderPartialAsync("BrickerFooter", Model);
+        await Html.RenderPartialAsync("Breaker/Footer", Model);
     }
     <required-client-resources area="Footer" />
 
