@@ -1,0 +1,30 @@
+@using EPiServer.Web
+
+@model IPageViewModel<SitePageData>
+
+@{
+    HelperResult ItemTemplate(HtmlHelpers.MenuItem item)
+    {
+        <li class="nav-item">
+            @Html.PageLink(item.Page, null, new { @class = "nav-link" + (item.Selected ? " active" : null) })
+        </li>
+        return new HelperResult(w => Task.CompletedTask);
+    }
+}
+
+ 
+
+<header class="grid">
+    <!-- Top Navigation -->
+    <nav class="s-12 grid background-none background-primary-hightlight">
+        <!-- logo -->
+        <a class="m-12 l-3 padding-2x logo" href="@Model.Layout.LogotypeLinkUrl" title="@Model.Layout.Logotype.Title">
+            <div epi-property="@Model.Layout.Logotype" />
+        </a> 
+        <div class="top-nav s-12 l-9">
+            <ul class="top-ul right chevron">
+                @Html.MenuList(SiteDefinition.Current.StartPage, ItemTemplate)
+            </ul>
+        </div>
+    </nav>
+</header>
